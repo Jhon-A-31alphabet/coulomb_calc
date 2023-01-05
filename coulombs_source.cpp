@@ -52,17 +52,17 @@ void menu(){
 }
 
 void cordenadas(){
-    cout<<"cordenadas de la carga q1 horizontal"<<endl;
+    cout<<"cordenadas de la carga q1 X:  "<<endl;
     cin>>posicion.eje_X;
-    cout<<"cordenadas de la carga q1 vertical"<<endl;
+    cout<<"cordenadas de la carga q1 y:  "<<endl;
     cin>>posicion.eje_Y;
     cout<<"<x="<<posicion.eje_X<<">"<<"<y="<<posicion.eje_Y<<">"<<endl;
 
     cout<<"---------------------------------------------------------------------------------------------------------------"<<endl<<endl;
 
-    cout<<"cordenadas de la carga q2 horizontal"<<endl;
+    cout<<"cordenadas de la carga q2 X:    "<<endl;
     cin>>posicion.eje_X_2;
-    cout<<"cordenadas de la carga q2 vertical"<<endl;
+    cout<<"cordenadas de la carga q2 y:     "<<endl;
     cin>>posicion.eje_Y_2;
     cout<<"<X="<<posicion.eje_X_2<<">"<<"<y="<<posicion.eje_Y_2<<">"<<endl<<endl;
 }
