@@ -30,9 +30,9 @@ int main(){
     while(mainloop=1){ //it will never stop.
     menu();
     cout<<endl<<endl;
-    cout<<" >           q1: ";cin>>parametros.carga_1;cout<<endl;
-    cout<<" >           q2: ";cin>>parametros.carga_2;cout<<endl;
-    cout<<" >          r^2:";cin>>parametros.distancia_en_metros;cout<<endl;
+    cout<<" >>>>>>>>   q1: ";cin>>parametros.carga_1;cout<<endl;
+    cout<<" >>>>>>>>   q2: ";cin>>parametros.carga_2;cout<<endl;
+    cout<<" >>>>>>>>   r^2:";cin>>parametros.distancia_en_metros;cout<<endl;
 
     double result = constante_electrica*(parametros.carga_1*parametros.carga_2/pow(parametros.distancia_en_metros,2));
     cout<<result<<endl;
@@ -45,24 +45,24 @@ int main(){
 
 }
 
-void menu(){
+void menu(){ // main menu to explain the formula and coulomb rule
     cout<<"Manejo del calculo de la fuerza de atraccion"<<endl<<"de particulas subatomicas"<<endl;
     cout<<"utilizando la ley de coulomb. (vamos a medir culombios)"<<endl;
     cout<<"La formula de la ley de coulomb es:      F = K* (Q1*Q2) / R**2"<<endl<<endl;
 }
 
 void cordenadas(){
+
     cout<<"cordenadas de la carga q1 X:  "<<endl;
     cin>>posicion.eje_X;
     cout<<"cordenadas de la carga q1 y:  "<<endl;
     cin>>posicion.eje_Y;
-    cout<<"<x="<<posicion.eje_X<<">"<<"<y="<<posicion.eje_Y<<">"<<endl;
-
-    cout<<"---------------------------------------------------------------------------------------------------------------"<<endl<<endl;
 
     cout<<"cordenadas de la carga q2 X:    "<<endl;
     cin>>posicion.eje_X_2;
     cout<<"cordenadas de la carga q2 y:     "<<endl;
-    cin>>posicion.eje_Y_2;
-    cout<<"<X="<<posicion.eje_X_2<<">"<<"<y="<<posicion.eje_Y_2<<">"<<endl<<endl;
+    cin>>posicion.eje_Y_2;cout<<endl;
+    //------print the electric charge location-------
+    cout<<"Q1"<<"<X="<<posicion.eje_X_2<<">"<<"<y="<<posicion.eje_Y_2<<">"<<endl;
+    cout<<"Q2"<<"<X ="<<posicion.eje_X<<">"<<"<y ="<<posicion.eje_Y<<">"<<endl<<endl;
 }
