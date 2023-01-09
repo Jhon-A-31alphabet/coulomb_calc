@@ -1,6 +1,8 @@
 #include<iostream>
 #include<math.h>
-#include<cmath>
+
+#include<windows.h>
+#include<string>
 
 using namespace std;
 
@@ -26,24 +28,37 @@ void cordenadas();
 void menu();
 
 int main(){
+    //stack
+    char continuar;
 
-    while(mainloop=1){ //it will never stop.
-    menu();
-    cout<<endl<<endl;
-    cout<<" >>>>>>>>   q1: ";cin>>parametros.carga_1;cout<<endl;
-    cout<<" >>>>>>>>   q2: ";cin>>parametros.carga_2;cout<<endl;
-    cout<<" >>>>>>>>   r^2:";cin>>parametros.distancia_en_metros;cout<<endl;
 
-    double result = constante_electrica*(parametros.carga_1*parametros.carga_2/pow(parametros.distancia_en_metros,2));
-    cout<<result<<endl;
-    double f = result/pow(parametros.distancia_en_metros,2);
-    cout<<f<<"  NEWTONS"<<endl<<endl;
+    do{
+        system("cls");
+        menu();
+        cout<<endl<<endl;
+        //try
+        cout<<" >>>>>>>>   q1: ";cin>>parametros.carga_1;cout<<endl;
+        cout<<" >>>>>>>>   q2: ";cin>>parametros.carga_2;cout<<endl;
+        cout<<" >>>>>>>>   r^2:";cin>>parametros.distancia_en_metros;cout<<endl;
 
-    cordenadas();
-    }
-    return 0;
+        double result = constante_electrica*(parametros.carga_1*parametros.carga_2/pow(parametros.distancia_en_metros,2));
+        cout<<result<<endl;
+        double f = result/pow(parametros.distancia_en_metros,2);
+        cout<<f<<"  NEWTONS"<<endl<<endl;
 
+
+
+        cordenadas();
+        //char continuar;
+        cout<<"desea hacer otra operacion: si/no    ";
+        cin>>continuar;
+        }
+        while((continuar=='si')||(continuar=='SI'));
+
+
+        return 0;
 }
+
 
 void menu(){ // main menu to explain the formula and coulomb rule
     cout<<"Manejo del calculo de la fuerza de atraccion"<<endl<<"de particulas subatomicas"<<endl;
